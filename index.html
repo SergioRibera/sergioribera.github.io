@@ -4,18 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 	<link rel="stylesheet" href="res-home/css/reset.css">
     <link rel="stylesheet" href="res-home/css/style.css">
     <link rel="stylesheet" href="res-home/css/contact.css">
+    <link rel="stylesheet" href="res-home/css/carousel.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
     <script src="res-home/js/modernizr.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 	<title>Sergio Ribera Portafolio</title>
 </head>
 <body>
+    <div id="particles-js">
+
+    </div>
 	<nav id="cd-vertical-nav">
 		<ul>
 			<li>
@@ -99,18 +102,41 @@
 	<section id="section4" class="cd-section">
         <div class="div">
             <p>Aqui tengo algunos trabajos que considero que representan el nivel que tengo (Aparte de la página actual):</p>
-            <div class="d-inline-flex mt-4 mx-3 mx-lg-0">
-                <div class="rounded mx-2">
-                    <img class="rounded mb-2" src="res-home/img/Product-01.png" alt="Proyecto Easy Shop" title="Proyecto Easy Shop">
-                    <a href="" target="_blank" class="lead text-white"><span>Easy Shop</span></a>
+            <div class="carousel">
+                <div class="carousel-cell">
+                    <a href="https://easyshop.sergioribera.com" target="_blank" class="lead text-white">
+                        <img src="res-home/img/Product-01.png" alt="orange tree" />
+                    </a>
                 </div>
-                <div class="reounded mx-2">
-                    <img class="rounded mb-2" src="res-home/img/Product-02.png" alt="Fruta Fresca Delivery" title="Fruta Fresca Delivery">
-                    <a href="http://frutafresca.delivery" target="_blank" class="lead text-white"><span>Fruta Fresca Delivery</span></a>
+                <div class="carousel-cell">
+                    <a href="https://frutafresca.delivery" target="_blank" class="lead text-white">
+                        <img src="res-home/img/Product-02.png" alt="One World Trade" />
+                    </a>
                 </div>
-                <div class="reounded mx-2">
-                    <img class="rounded mb-2" src="res-home/img/Product-03.png" alt="Mi Blog" title="Mi Blog">
-                    <a href="http://blog.sergioribera.com" target="_blank" class="lead text-white"><span>Mi Blog</span></a>
+                <div class="carousel-cell">
+                    <a href="https://blog.sergioribera.com" target="_blank" class="lead text-white">
+                        <img src="res-home/img/Product-03.png" alt="drizzle" />
+                    </a>
+                </div>
+                <div class="carousel-cell">
+                    <a href="https://sergioribera.github.io/404%20LinuxStyle/" target="_blank" class="lead text-white">
+                        <img src="res-home/img/Product-04.png" alt="cat nose" />
+                    </a>
+                </div>
+                <div class="carousel-cell">
+                    <a href="https://sergioribera.github.io/pages/" target="_blank" class="lead text-white">
+                        <img src="res-home/img/Product-05.png" alt="contrail" />
+                    </a>
+                </div>
+                <div class="carousel-cell">
+                    <a href="https://sergioribera.github.io/blog/Home" target="_blank" class="lead text-white">
+                        <img src="res-home/img/Product-06.png" alt="golden hour" />
+                    </a>
+                </div>
+                <div class="carousel-cell">
+                    <a href="https://sergioribera.github.io/blog/Blog/" target="_blank" class="lead text-white">
+                        <img src="res-home/img/Product-07.png" alt="flight formation" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -168,9 +194,11 @@
             <span class="lead text-white w-100" style="font-size: small;">&copy; Sergio Ribera 2020</span>
         </div>
 	</section>
-	
-<script src="res-home/js/jquery-2.1.1.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="res-home/js/main.js"></script>
-</body>
+    
+    <script src="res-home/js/particles.min.js"></script>
+    <script src="res-home/js/jquery-2.1.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
+    <script src="res-home/js/main.js"></script>
+    </body>
 </html>

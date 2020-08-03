@@ -15,6 +15,13 @@ Primary style
   border-radius: .18rem;
 }
 
+#particles-js{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
 .wave-container{
   position: absolute;
   width: 100%;
@@ -172,6 +179,9 @@ Main components
   min-height: 100%;
   position: relative;
   padding: 2em 0;
+}
+.cd-section *{
+  z-index: 2;
 }
 .cd-section:nth-of-type(odd) {
   background-color: #212121;
