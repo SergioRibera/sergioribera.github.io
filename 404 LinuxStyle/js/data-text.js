@@ -35,7 +35,27 @@ const texts = [
 const textsInicio = [
     {text:"<p><code>SergioRibera Linux 20.20.6-sarch1-1 (tty1)</code></p><br>"},
     {text:"<p><code>sarchiso login: root (automatic login)</code></p><br>"},
-    {text:"<img src=\"img/404.png\"></img><br><br><p onclick=\"goTo()\" class=\"option_C\"><code style=\"color:red\">&nbsp;&nbsp;&nbsp;&nbsp;1) go to home</code></p><p onclick=\"contactMe()\" class=\"option_C\"><code style=\"color:red\">&nbsp;&nbsp;&nbsp;&nbsp;2) contact me</code></p><br>"},
+    {text:`<!--<img src=\"img/404.png\"></img>--><div class=\"textError\"><pre>
+                                                       
+       444444444         000000000              444444444  
+      4::::::::4       00:::::::::00           4::::::::4  
+     4:::::::::4     00:::::::::::::00        4:::::::::4  
+    4::::44::::4    0:::::::000:::::::0      4::::44::::4  
+   4::::4 4::::4    0::::::0   0::::::0     4::::4 4::::4  
+  4::::4  4::::4    0:::::0     0:::::0    4::::4  4::::4  
+ 4::::4   4::::4    0:::::0     0:::::0   4::::4   4::::4  
+4::::444444::::444  0:::::0 000 0:::::0  4::::444444::::444
+4::::::::::::::::4  0:::::0 000 0:::::0  4::::::::::::::::4
+4444444444:::::444  0:::::0     0:::::0  4444444444:::::444
+          4::::4    0:::::0     0:::::0            4::::4  
+          4::::4    0::::::0   0::::::0            4::::4  
+          4::::4    0:::::::000:::::::0            4::::4  
+        44::::::44   00:::::::::::::00           44::::::44
+        4::::::::4     00:::::::::00             4::::::::4
+        4444444444       000000000               4444444444
+                                                       
+                                                       
+                                                       </pre></div><br><br><p onclick=\"goTo()\" class=\"option_C\"><code style=\"color:red\">&nbsp;&nbsp;&nbsp;&nbsp;1) go to home</code></p><p onclick=\"contactMe()\" class=\"option_C\"><code style=\"color:red\">&nbsp;&nbsp;&nbsp;&nbsp;2) contact me</code></p><br>`},
     {text:"<input type=\"text\" style=\"display:contents;\" id=\"input_t\"><code><code style=\"color:red\">root</code>@sarchiso<code style=\"color:yellow\">~#</code>&nbsp;</code>"},
 ];
 const textBye = "<br><p><code style=\"color:white;font-size:24px;\">&nbsp;&nbsp;&nbsp;&nbsp;Good Bye  :D</code></p> <br> <code><code style=\"color:red\">root</code>@sarchiso<code style=\"color:yellow\">~#</code>&nbsp;</code>";
