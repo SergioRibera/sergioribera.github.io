@@ -35,4 +35,7 @@ if ( $_GET['user'] )
     if($GET['user'] == 'seryi'){
         $path = get('path');
         shell_exec( ‘cd $path && git reset –hard HEAD && git pull’ );
+        echo 'Pull Success';
     }
+
+echo 'Error';
