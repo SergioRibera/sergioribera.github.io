@@ -19,4 +19,3 @@ RewriteRule ^(.+?)/?$ $1.php [L]
 RewriteCond %{HTTP_HOST} ^sergioribera\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.sergioribera\.com$
 RewriteRule ^/?$ "https\:\/\/sergioribera\.com\/" [R=301,L]
-
