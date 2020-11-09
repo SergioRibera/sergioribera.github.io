@@ -1,0 +1,22 @@
+ErrorDocument 404 pages/404/index.html
+
+# Activamos la Reescritura en la Url (Para API o ejecucion de php)
+Options -Multiviews -Indexes +FollowSymLinks
+RewriteBase /
+DirectorySlash Off
+RewriteEngine On 
+# externally redirect /dir/file.php to /dir/file and remove index
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?(?:index)?(.*?)\.(?:html?|php)/?[\s?] [NC]
+RewriteRule ^ /%1%2 [R=301,L,NE]
+# remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{THE_REQUEST} \s(.+?)/+[?\s]
+RewriteRule ^(.+?)/$ /$1 [R=301,L]
+# internally add php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+RewriteCond %{HTTP_HOST} ^sergioribera\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.sergioribera\.com$
+RewriteRule ^/?$ "https\:\/\/sergioribera\.com\/" [R=301,L]
+
