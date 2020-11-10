@@ -34,6 +34,15 @@
             $('header, body').removeClass('active');
         }
     });
+	    window.addEventListener('scroll', () => {
+            let header = document.querySelector('ul#menu');
+		    if (window.scrollY >= 80){
+                header.style.position = "fixed";
+                header.style.left = 0;
+                header.style.right = 0;
+            }
+		    else header.style = "position: absolute;";
+	    })
 
     // Scroll to top
     $('#to-top').click(function() {

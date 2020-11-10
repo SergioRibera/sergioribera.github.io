@@ -64,6 +64,7 @@ header {
 }
 
 header ul {
+    z-index: 99999;
     display: inline-block;
     background: #fff;
     text-align: center;
@@ -260,7 +261,7 @@ footer {
 
 #lead-content {
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -306,7 +307,7 @@ footer {
     right: 0;
     width: 100%;
     text-align: center;
-    z-index: 10;
+    z-index: 2;
     bottom: 15px;
     color: #fff
 }
@@ -438,7 +439,7 @@ footer {
     background: #3498db;
     border-radius: 50%;
     float: left;
-    z-index: 99;
+    z-index: 2;
     margin-left: 280px
 }
 
