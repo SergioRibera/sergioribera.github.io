@@ -1,4 +1,4 @@
-ErrorDocument 404 404Linux/index.html
+ErrorDocument 404 /404Linux/index.html
 
 # Activamos la Reescritura en la Url (Para API o ejecucion de php)
 Options -Multiviews -Indexes +FollowSymLinks
