@@ -1,175 +1,285 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
-	<link rel="stylesheet" href="res-home/css/reset.css">
-    <link rel="stylesheet" href="res-home/css/style.css">
-    <link rel="stylesheet" href="res-home/css/contact.css">
-    <link rel="stylesheet" href="res-home/css/carousel.css">
-    <script src="res-home/js/modernizr.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-	<title>Sergio Ribera Portafolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SergioRibera Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-    ☺
-	<nav id="cd-vertical-nav">
-		<ul>
-			<li>
-				<a href="#section1" data-number="1">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Intro</span>
-				</a>
-			</li>
-			<li>
-				<a href="#section2" data-number="2">
-					<span class="cd-dot"></span>
-					<span class="cd-label">About</span>
-				</a>
-			</li>
-			<li>
-				<a href="#section3" data-number="3">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Skills</span>
-				</a>
-			</li>
-			<li>
-				<a href="#section4" data-number="4">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Portfolio</span>
-				</a>
-			</li>
-			<li>
-				<a href="#section5" data-number="5">
-					<span class="cd-dot"></span>
-					<span class="cd-label">Contact</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<a class="cd-nav-trigger cd-img-replace">Navigation<span></span></a>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
 
-	<section id="section1" class="cd-section">
-        <div class="div first-title">
+    <div id="lead">
+        <div id="lead-content">
             <h1>Sergio Ribera</h1>
-            <p class="mt-3" style="position: relative;">Desarrollador Independiente</p>
+            <h2>Software Developer</h2>
         </div>
-        <div class="wave-container">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-            <div class="wave wave4"></div>
-        </div>
-		<a href="#section2" class="cd-scroll-down cd-img-replace animate__animated pulse animate__infinite"></a>
-	</section>
-	<section id="section2" class="cd-section p-0">
-        <div class="wave-container">
-            <div class="wave wave1" style="top: 31px;background-image: url(res-home/img/wave1.png);"></div>
-            <div class="wave wave2" style="top: 31px;background-image: url(res-home/img/wave1.png);"></div>
-            <div class="wave wave3" style="top: 31px;background-image: url(res-home/img/wave1.png);"></div>
-            <div class="wave wave4" style="top: 31px;background-image: url(res-home/img/wave1.png);"></div>
-        </div>
-        <div class="div">
-            <p>&ldquo;Soy un joven de 18 años amante de la frase <span style="color: rgba(128, 255, 0, 0.781);">'the program is compiled successfull.'</span>, no solo eso si no que también amo las ideas innovadoras y sueño con cambiar el mundo dejando una huella en él &rdquo;</p>
-        </div>
-	</section>
+        <!-- End #lead-content -->
 
-	<section id="section3" class="cd-section">
-        <div class="div text-left">
-            <p>Entre las habilidades que tengo creo que estas son las que más merecen atención:</p>
-            <ul class="mt-4 ml-5 text-muted text-left">
-                <li class="my-2">Desarrollador De Videojuegos</li>
-                <li class="my-2">Desarrollador Full Stack Web</li>
-                <li class="my-2">Desarrollador De Aplicaciones Moviles</li>
-                <li class="my-2">Desarrollador De Aplicaciones de Escritorio</li>
-            </ul>
-            <p>Y estas son algunas habilidades como persona:</p>
-            <ul class="mt-4 ml-5 text-muted text-left">
-                <li class="my-2">Creativo</li>
-                <li class="my-2">Innovador</li>
-                <li class="my-2">Entusiasta</li>
-                <li class="my-2">Visionario</li>
-            </ul>
-        </div>
-	</section>
+        <div id="lead-overlay"></div>
 
-	<section id="section4" class="cd-section">
-        <div clas="align-self-center justify-content-center text-center w-100 w-md-80" id="pro-content">
-            <h1>Projects</h1>
-            <div class="d-inline-flex w-100">
-                <div class="rounded bg-primary m-2" style="height:150px;max-width:200px;min-width: 170px;">
-                    <span class="text-bold text-black">404</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam doloremque culpa magnam temporibus, nesciunt odit provident vel! Voluptate, enim?</p>
-                    <div class="w-100 justify-content-end">
-                        <a><i class="fa fa-youtube-play fa-fw"></i></a>
-                    </div>
+        <div id="lead-down">
+            <span>
+                <!--<i class="fa fa-chevron-down" aria-hidden="true"></i>-->
+                <img src="./images/cd-arrow-bottom.svg" alt="">
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
                 </div>
-                <div class="rounded bg-primary m-2" style="height:150px;max-width:200px;min-width: 170px;">
+                <div class="col-md-8">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
+                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
+                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- End #about -->
 
-	<section id="section5" class="cd-section">
-        <div class="div">
-            <div class="container">
-                <div class="row mx-3 mx-md-0">
-                    <div class="col-12 col-md-6 order-2 order-md-1 my-3">
-                        <h1>Redes Sociales</h1>
-                        <div class="d-md-inline-flex my-4 align-items-center h-100">
-                            <a class="text-white mx-2 my-2 my-md-0" href="https://sergioribera.com" target="_blank"><i class="fa fa-globe fa-fw"></i></a>
-                            <a class="text-white mx-2 my-2 my-md-0" href="https://facebook.com/SergioRiberaID" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
-                            <a class="text-white mx-2 my-2 my-md-0" href="https://www.youtube.com/channel/UCm_CD6QqAEgtaHde9UycbuA?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play fa-fw"></i></a>
-                            <a class="text-white mx-2 my-2 my-md-0" href="https://www.twitch.tv/sergioriberaid" target="_blank"><i class="fa fa-twitch fa-fw"></i></a>
-                            <a class="text-white mx-2 my-2 my-md-0" href="https://github.com/SergioRibera" target="_blank"><i class="fa fa-github fa-fw"></i></a>
-                            <a class="text-white mx-2 my-2 my-md-0" href="https://discord.gg/3kkYzz" target="_blank"><i class="fa fa-discord fa-fw"></i></a>
-                            <a class="text-white mx-2 my-2 my-md-0" href="https://twitter.com/SergioRibera_ID" target="_blank"><i class="fa fa-twitter fa-fw"></i></a>
-                        </div>
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="Jun 2020">
+                <h3>Volpment</h3>
+                <h4>CTO</h4>
+                <p>
+                    On this work, i dir a team to developer al projects using
+                    Scrum
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="container">
+            <div class="row-cert">
+                <div class="cert shadow-large">
+                    <div class="cert-image" style="background-image:
+                        url('./images/Certs/Scrum.png');"></div>
+                    <div class="cert-info">
+                        <a
+                            href="https://www.youracclaim.com/earner/earned/badge/4b528601-f89a-495c-91b9-31c8862ccf46" target="_blank">Scrum</a>
                     </div>
-                    <div class="col-12 col-md-6 order-1 order-md-2 my-3">
-                        <h1>Contacto Directo</h1>
-                        <form method="post" class="text-center mt-2">
-                            <div class="my-3">
-                                <label class="field a-field a-field_a1">
-                                    <input class="field__input a-field__input" placeholder="e.g. Sergio Ribera" required>
-                                    <span class="a-field__label-wrap">
-                                      <span class="a-field__label">Nombre Completo</span>
-                                    </span>
-                                </label>                            
-                                <label class="field a-field a-field_a3 mt-2">
-                                    <input class="field__input a-field__input" placeholder="e.g. melnik909@ya.ru" required>
-                                    <span class="a-field__label-wrap">
-                                      <span class="a-field__label">Correo Electronico</span>
-                                    </span>
-                                </label>
-                                <label class="field a-field a-field_a1 mt-2">
-                                    <textarea name="" id="" rows="3" class="field__input a-field__input" placeholder="e.g. Saludos mi estimado esuve revisando su portafolio y me gustaría ponerme en contacto con ud para un proyecto." required></textarea>
-                                    <span class="a-field__label-wrap">
-                                      <span class="a-field__label">Mensaje</span>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-outline-special">Enviar</button>
-                            </div>
-                        </form>
+                </div>
+                <div class="cert shadow-large">
+                    <div class="cert-image" style="background-image:
+                        url('./images/Certs/SecurityInformatic.png');"></div>
+                    <div class="cert-info">
+                        <a
+                            href="https://sergioribera.com/images/Certs/SecurityInformatic.png">NetCat - Security Informatic</a>
+                    </div>
+                </div>
+                <div class="cert shadow-large">
+                    <div class="cert-image" style="background-image:
+                        url('./images/Certs/Php.jpg');"></div>
+                    <div class="cert-info">
+                        <a href="https://sergioribera.com/images/Certs/php.jpg">Php Advanced</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center w-100" style="position: absolute;top: 90vh;">
-            <hr style="border-top: 1px solid rgb(255 255 255);">
-            <span class="lead text-white w-100" style="font-size: small;">&copy; Sergio Ribera 2020</span>
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <h3>Game Dev</h3>
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image" style="background-image:url('./images/Projects/RunAThon.png');">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Run A Thon</h3>
+                        <p>
+                            We developed this project together with two friends for a 1 week Jam, what happened is that we came up with making an online video game, and this was our baby
+                        </p>
+                        <a href="https://watanoge.itch.io/run-a-thon">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <div class="project shadow-large">
+                    <div class="project-image" style="background-image:
+                        url('./images/Projects/MultipleBatalla.png');">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Multiple Batalla</h3>
+                        <p>
+                        </p>
+                        <a href="https://sergioribera.itch.io/juego-2d-tipo-supersmash">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <div class="project shadow-large">
+                    <div class="project-image" style="background-image:
+                        url('./images/Projects/PvZ.jpg');">
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Plants Vs Zombie Clone</h3>
+                        <p>
+                        </p>
+                        <a href="https://github.com/SergioRibera/PvZClone">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+            <div class="w-100 text-center">
+                <a href="/proyects.html">Show More</a>
+            </div>
         </div>
-	</section>
-    
-    <script src="res-home/js/particles.min.js"></script>
-    <script src="res-home/js/jquery-2.1.1.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
-    <script src="res-home/js/main.js"></script>
-    </body>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <h4>Languajes</h4>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Node.js</li>
+            <li>React</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+        </ul>
+        <h4>Technologies</h4>
+        <ul>
+            <li>React Native</li>
+            <li>Unity</li>
+            <li>Vim</li>
+            <li>Unix</li>
+            <li>Anroid Studio</li>
+            <li>Xamarin</li>
+        </ul>
+        <h4>Version Control</h4>
+        <ul>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>GitLab</li>
+        </ul>
+        <h4>Administration Masive Groups</h4>
+        <ul>
+            <li>Discord</li>
+            <li>Facebook</li>
+            <li>Telegram</li>
+        </ul>
+        <h4>Human Languajes</h4>
+        <ul>
+            <li>Spanish</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/contact@sergioribera.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 SergioRibera
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <img src="./images//cd-arrow-bottom.svg" alt="">
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/SergioRibera" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://gitlab.com/SergioRibera" target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/12349493/sergio-alejandro-ribera-costa" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/sergio-alejandro-a43877191" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/SergioRiberaID" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/SergioRibera_ID" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
 </html>
