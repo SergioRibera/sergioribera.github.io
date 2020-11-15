@@ -65,13 +65,19 @@ header {
 
 header ul {
     z-index: 99999;
+    min-width: 30%;
     display: inline-block;
     background: #fff;
     text-align: center;
     padding: 10px;
     margin: 0;
     border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px
+    border-bottom-left-radius: 4px;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    transition: all 1s ease;
 }
 
 header li {
