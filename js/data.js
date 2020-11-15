@@ -56,7 +56,7 @@
             {   name:"Remote Config",
                 desc:"This is a nice little project, consisting of a small php server to remotely manage the application settings. It works for video games, applications or whatever you want since it has an api (this project is too old but it preserves the concepts, the newest and most recent version of it, I don't think it will come out yet).",
                 urlImg:"/images/OpenSource/RemoteConfig.png",
-                urlView:"",urlTest:"", urlDoc:""},
+                urlView:"https://github.com/SergioRibera/RemoteConfig",urlTest:"", urlDoc:""},
             {   name:"FileOrganizer",
                 desc:"This is a simple python script which by means of an established and variable configuration, you can organize the specified folder, as indicated in the configurations.",
                 urlImg:"/images/OpenSource/FileOrganizer.GIF",
