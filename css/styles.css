@@ -65,6 +65,8 @@ header {
 
 header ul {
     z-index: 99999;
+    left: 35%;
+    right: 35%;
     min-width: 30%;
     display: inline-block;
     background: #fff;

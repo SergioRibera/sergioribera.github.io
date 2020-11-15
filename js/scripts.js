@@ -9,7 +9,6 @@
     Description: This file contains all the scripts associated with the single-page
     portfolio website.
 */
-
 (function($) {
 
     // Remove no-js class
@@ -35,13 +34,13 @@
         }
     });
 	    window.addEventListener('scroll', () => {
-            let header = document.querySelector('ul#menu');
-		    if (window.scrollY >= 80){
-                header.style.position = "fixed";
-                header.style.left = 0;
-                header.style.right = 0;
+            if(document.querySelector('ul#menu')){
+                let header = document.querySelector('ul#menu');
+                if (window.scrollY >= 80){
+                    header.style = "position:fixed;min-width:100%;left:0; rigth: 0";
+                }
+                else header.style = "";
             }
-		    else header.style = "position: absolute;";
 	    })
 
     // Scroll to top
