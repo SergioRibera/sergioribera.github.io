@@ -1,10 +1,12 @@
-ErrorDocument 404 /404Linux/index.html
-
 # Activamos la Reescritura en la Url (Para API o ejecucion de php)
 Options -Multiviews -Indexes +FollowSymLinks
 RewriteBase /
 DirectorySlash Off
 RewriteEngine On 
+
+ErrorDocument 404 https://sergioribera.com/404
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ /404Linux/index.html [L]
 # externally redirect /dir/file.php to /dir/file and remove index
 RewriteCond %{THE_REQUEST} \s/+(.*?/)?(?:index)?(.*?)\.(?:html?|php)/?[\s?] [NC]
 RewriteRule ^ /%1%2 [R=301,L,NE]
