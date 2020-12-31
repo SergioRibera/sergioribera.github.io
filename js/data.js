@@ -168,7 +168,7 @@
             {   name:"Happy New Year",
                 desc:"This project was developed with the purpose of giving a good farewell to 2020 and receiving 2021 in the best way with a small visual fireworks show.",
                 urlImg:"/images/Projects/newyear.png",
-                urlView:"https://github.com/SergioRibera/NewYear-Web", urlTest:"https://sergioribera.github.io/NewYear-Web", urlDoc:""}
+                urlView:"https://github.com/SergioRibera/NewYear-Web", urlTest:"https://sergioribera.com/NewYear-Web", urlDoc:""}
         ]
     }
 ];
