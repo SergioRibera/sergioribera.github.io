@@ -164,7 +164,11 @@
             {   name:"Example Shop",
                 desc:"This is one of the examples of how the store would look working.",
                 urlImg:"/images/Projects/previewShop.png",
-                urlView:"https://tunegositio.online/shop/luis-andres",urlTest:"", urlDoc:""}
+                urlView:"https://tunegositio.online/shop/luis-andres",urlTest:"", urlDoc:""},
+            {   name:"Happy New Year",
+                desc:"",
+                urlImg:"/images/Projects/newyear.png",
+                urlView:"https://github.com/SergioRibera/NewYear-Web", urlTest:"https://sergioribera.github.io/NewYear", urlDoc:""}
         ]
     }
 ];
