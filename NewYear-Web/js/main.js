@@ -3,10 +3,6 @@ var sparkles = [];
 var moving = true;
 var gravity = 0.4;
 
-let sets = {
-    txt: "Happy New Year",
-    year: 2021
-};
 window.addEventListener("load", (e) => {
     let a = document.getElementById("txt-ny-t");
     a.innerText = sets.txt;
@@ -42,6 +38,12 @@ function draw() {
         var thisRocket = new rocket();
         rockets.push(thisRocket);
     }
+}
+function mouseClicked(){
+    stroke(255);
+    ellipse(mouseX, mouseY, 15, 15);
+    var thisRocket = new rocket(createVector(((width/2)-mouseX) * -1, 0), undefined, undefined, undefined, undefined);
+    rockets.push(thisRocket);
 }
 function rocket(position, speed, type, sparkler, afterblow) {
     //  stroke(255);
@@ -251,19 +253,4 @@ function sparkle(position, speed, fade, hue, sat, type) {
         this.brt = this.brt - fade;
         this.burntime++;
     }
-}
-function touchStarted() {
-    if (moving) {
-        moving = false;
-        strokeWeight(1);
-        fill(255);
-        rect(width / 2 - 30, -height + 20, 10, 30);
-        rect(width / 2 - 50, -height + 20, 10, 30);
-        noLoop();
-    } else {
-        moving = true;
-        loop();
-    }
-    // prevent default
-    return false;
 }
