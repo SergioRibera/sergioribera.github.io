@@ -3,8 +3,9 @@
         let header = document.querySelector('ul#menu');
 		if (window.scrollY >= 80){
             header.style = "position:fixed;min-width:100%;left:0; rigth: 0";
-        }
-		    else header.style = "";
+        } else
+            if (header || header !== undefined)
+                header.style = "";
 	})
 
     // Remove no-js class
