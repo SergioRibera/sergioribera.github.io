@@ -41,6 +41,30 @@
         ]
     },
     {
+        name: "Plugins for Applications",
+        desc: "Like everyone, I use many tools and applications on a daily basis, the difference is that I like to develop add-ons that make the tool I like more powerful. In this way these accessories that I carry in my heart were born",
+        datas: [
+            {
+                name: "Vim Files",
+                desc: "When using (Neo) Vim for a long time I realized that there was no way (without terminal) that allows me to handle files and directories (create, move, rename, etc). Based on this problem, I developed this plugin that nstively on all platforms allows not only to manipulate them but also to do it through pre-established templates",
+                urlImg: "/images/Plugins/vim-files.gif",
+                urlView: "https://github.com/SergioRibera/vim-files",
+                urlTest: "", urlDoc: "https://sergioribera.gitbook.io/generic-tools/vim-nvim-plugins/vim-files" },
+            {
+                name: "Vim Screenshot",
+                desc: "Having worked with Visual Studio Code before and being a very sociable person who likes not only helping but not sharing, the Polacode extension (to take screenshots of the code and make it look nice) not only is it surprising, but it also encouraged me to develop an extension for (Neo) Vim.",
+                urlImg: "/images/Plugins/vim-screenshot.png",
+                urlView: "https://github.com/SergioRibera/vim-screenshot",
+                urlTest: "", urlDoc: "" },
+            {
+                name: "NewTab Chromium Extension",
+                desc: "This adorable little plugin was born from the idea that I wanted a developer-oriented home tab that is highly customizable and pretty, it's still under development, but you can see the progress",
+                urlImg: "/images/Plugins/chrome-new-tab.png",
+                urlView: "https://github.com/SergioRibera/NewTab-ChromeExtension",
+                urlTest: "", urlDoc: "" },
+        ]
+    },
+    {
         name: "Open Source",
         desc: "Among the things that I like a lot, one of them is the community that can be generated and of my favorite communities is the Linux community, I love to see how communities can be formed to achieve something or simply to share with each other about something they like, something more than a simple friendship unites them, a feeling unites them, that is incredible and that is why I love to contribute to Open Source because in that way I help people who need it or I teach skills for those who do not know, it also seems like a nice way to leave a grain of sand in the development world.",
         datas: [

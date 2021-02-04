@@ -1,15 +1,11 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
-
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
-*/
 (function($) {
+    window.addEventListener('scroll', () => {
+        let header = document.querySelector('ul#menu');
+		if (window.scrollY >= 80){
+            header.style = "position:fixed;min-width:100%;left:0; rigth: 0";
+        }
+		    else header.style = "";
+	})
 
     // Remove no-js class
     $('html').removeClass('no-js');
