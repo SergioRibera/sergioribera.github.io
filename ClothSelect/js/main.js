@@ -43,7 +43,14 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("btn-screenshot").addEventListener("click", () => {
         domtoimage.toBlob(bodyHuman)
             .then(function (blob) {
-                window.saveAs(blob, 'my-node.png');
+                var a = document.createElement("a");
+                document.body.appendChild(a);
+                a.style = "display: none";
+                url = window.URL.createObjectURL(blob);
+                a.href = url;
+                a.download = fileName;
+                a.click();
+                window.URL.revokeObjectURL(url);
             });
     })
 });
