@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 a.style = "display: none";
                 url = window.URL.createObjectURL(blob);
                 a.href = url;
-                a.download = fileName;
+                a.download = `Design-${indexBlusa}-${indexPant}.png`;
                 a.click();
                 window.URL.revokeObjectURL(url);
             });
