@@ -1,0 +1,75 @@
+html, * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Monserrat', sans-serif;
+    transition: .5s;
+}
+body {
+    width: 100vw;
+    background-color: #e4e4e4;
+}
+.container {
+    display: flex;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 100px);
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.buttons {
+    display: flex;
+    flex-flow: column wrap;
+}
+.buttons button {
+    width: 30px;
+    height: 30px;
+    color: #616161 !important;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border: none;
+    fill: #616161;
+}
+.buttons button:hover { cursor: pointer; background-color: #616161; }
+.buttons button:hover > .buttons button svg { filter: invert(0%); }
+.base-human {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/Modelos/modelo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    margin: 0px 15px;
+}
+.part-body {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.part-body img{
+    width: 100%;
+    height: 100%;
+}
+.container-btn {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+}
+.container-btn button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: transparent;
+}
+.container-btn button:hover { cursor: pointer; }
