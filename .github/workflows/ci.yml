@@ -1,0 +1,58 @@
+jobs:
+  check_rust:
+    outputs:
+      exists: ${{ steps.check.outputs.exists }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: check
+        run: ((ls Cargo.toml >> /dev/null 2>&1 && echo "exists=true") || echo "exists=false") >> "$GITHUB_OUTPUT"
+
+  # Run cargo clippy -- -D warnings
+  clippy_check:
+    if: ${{ needs.check_rust.outputs.exists == true }}
+    name: Clippy
+    needs: [check_rust]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - uses: Swatinem/rust-cache@v2
+      - uses: dsherret/rust-toolchain-file@v1
+      - name: Run clippy
+        uses: actions-rs/cargo@v1.0.1
+        with:
+          args: -- -D warnings
+          command: clippy
+
+  # Run cargo fmt --all -- --check
+  format:
+    if: ${{ needs.check_rust.outputs.exists == true }}
+    name: Format
+    needs: [check_rust]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - uses: dsherret/rust-toolchain-file@v1
+      - name: Run cargo fmt
+        uses: actions-rs/cargo@v1.0.1
+        with:
+          args: --all -- --check
+          command: fmt
+
+name: CI
+on:
+  pull_request:
+    branches:
+      - main
+      - rust
+      - dev
+  push:
+    branches:
+      - main
+      - dev
+      - rust
+    paths-ignore:
+      - ".github/build.yml"
+      - "Makefile.toml"
+      - "README.md"

@@ -1,0 +1,6 @@
+[workspace]
+members = ["web", "models", "lambda_service"]
+
+[profile.release]
+opt-level = "z"
+lto = true

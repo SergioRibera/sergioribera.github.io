@@ -1,0 +1,21 @@
+# syntax=docker/dockerfile:experimental
+FROM rust:1.68.2-alpine as base
+RUN rustup target add x86_64-unknown-linux-musl
+
+WORKDIR /src
+
+RUN apk add --no-cache musl-dev=1.2.3-r4 openssl-dev pkgconfig
+
+# Rust Build steps
+COPY ./models /models
+COPY ./lambda_service /src
+COPY ./rust-toolchain.toml /src
+
+RUN cargo build --release --target x86_64-unknown-linux-musl
+
+FROM alpine:3.17.3
+
+COPY --from=base /src/target/x86_64-unknown-linux-musl/release/bootstrap /
+
+ENTRYPOINT [ "/bootstrap" ]
+CMD [ "bootstrap.handler" ]

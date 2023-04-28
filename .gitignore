@@ -1,2 +1,6 @@
 .env
 /deploy/*
+***/pkg
+***/target
+***/dist
+.env

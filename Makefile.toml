@@ -1,0 +1,76 @@
+[env]
+CARGO_MAKE_EXTEND_WORKSPACE_MAKEFILE = "true"
+
+[tasks.default]
+alias = "check"
+
+[tasks.docs]
+description = "Generate docs"
+command = "cargo"
+args = ["doc", "--all"]
+
+[tasks.upload-docs]
+description = "Upload docs"
+command = "cargo"
+args = ["doc-upload"]
+
+[tasks.clean]
+description = "Clean all target directory"
+command = "cargo"
+args = ["clean"]
+
+[tasks.fmt]
+description = "Check format quality"
+command = "cargo"
+args = ["fmt", "--all", "--", "--check"]
+
+[tasks.fix-fmt]
+description = "Fix format"
+command = "cargo"
+args = ["fmt", "--all", "--", "--write-mode=overwrite"]
+
+[tasks.clippy]
+description = "Check code quality"
+command = "cargo"
+args = ["clippy", "--", "-D", "warnings"]
+
+[tasks.fix-clippy]
+description = "Fix code quality"
+command = "cargo"
+args = ["fix", "--allow-dirty"]
+
+[tasks.test]
+description = "Check all unit test"
+command = "cargo"
+args = ["test"]
+dependencies = ["fmt", "clippy"]
+
+[tasks.check]
+description = "Check all issues, format and code quality"
+dependencies = ["fmt", "clippy", "test"]
+
+[tasks.fix-all]
+description = "Try fix all clippy and format issues"
+dependencies = ["fix-fmt", "fix-clippy"]
+
+[tasks.build]
+description = "Generate release binary/lib"
+dependencies = [
+    "fmt",
+    "clippy",
+    "test",
+    "release-build-lambda",
+    "release-build-web",
+]
+
+[tasks.dev]
+dependencies = ["run-lambda", "run-web"]
+
+[tasks.publish]
+dependencies = ["fmt", "clippy", "test"]
+script.pre = "cargo release --workspace --execute ${@}"
+script.main = """
+docker build -t lambda_service:$CARGO_MAKE_CRATE_VERSION -f Dockerfile.lambda . && \
+docker build -t static:$CARGO_MAKE_CRATE_VERSION -f Dockerfile .
+"""
+script.post = 'echo "Now you can follow the next steps for publish into AWS ECR https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html\nAnd use $CARGO_MAKE_CRATE_VERSION as tag image"'

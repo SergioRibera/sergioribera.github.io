@@ -1,0 +1,9 @@
+[tasks.release-build-lambda]
+env_files = [ ".env" ]
+command = "cargo"
+args = ["build", "--release"]
+
+[tasks.run-lambda]
+env_files = [ ".env.dev" ]
+command = "cargo"
+args = ["lambda", "watch"]
