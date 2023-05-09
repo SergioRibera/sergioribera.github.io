@@ -10,9 +10,9 @@ RUN apk add --no-cache musl-dev=1.2.3-r4 openssl-dev pkgconfig
 COPY ./models /models
 COPY ./service /src
 COPY ./rust-toolchain.toml /src
-COPY ./.env /src
 
-RUN source /src/.env && cargo build --release --target x86_64-unknown-linux-musl
+RUN --mount=type=secret,id=my_env source /run/secrets/my_env && \
+    cargo build --release --target x86_64-unknown-linux-musl
 
 FROM alpine:3.17.3
 

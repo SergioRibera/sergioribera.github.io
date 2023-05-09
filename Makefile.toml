@@ -73,7 +73,7 @@ dependencies = ["run-service", "run-web"]
 dependencies = ["fmt", "clippy", "test"]
 script.pre = "mold -run cargo release --workspace --execute ${@}"
 script.main = """
-docker build -t portfolio_service:$CARGO_MAKE_CRATE_VERSION -f Dockerfile.service . && \
+docker build -t --mount=type=secret,id=my_env,dst=/etc/secrets/my_env portfolio_service:$CARGO_MAKE_CRATE_VERSION -f Dockerfile.service . && \
 docker build -t portfolio_static:$CARGO_MAKE_CRATE_VERSION -f Dockerfile.web .
 """
 script.post = """
