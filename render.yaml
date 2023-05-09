@@ -1,10 +1,10 @@
 services:
-  - dockerfilePath: Dockerfile
+  - dockerfilePath: Dockerfile.web
     env: docker
     name: FrontEnd
     type: web
 
-  - dockerfilePath: Dockerfile.lambda
+  - dockerfilePath: Dockerfile.service
     env: docker
     name: BackEnd Service
     type: web

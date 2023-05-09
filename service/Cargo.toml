@@ -1,0 +1,16 @@
+[package]
+name = "service"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "bootstrap"
+path = "./src/main.rs"
+
+[dependencies]
+models = { path = "../models" }
+obfstr.workspace = true
+once_cell.workspace = true
+
+salvo = { version = "0.40.0", features = ["basic-auth", "oapi", "session"] }
+tokio = { version = "1.28.0", default-features = false, features = ["macros"] }

@@ -1,6 +1,10 @@
 [workspace]
-members = ["web", "models", "lambda_service"]
+members = ["models", "service", "web"]
 
 [profile.release]
 opt-level = "z"
 lto = true
+
+[workspace.dependencies]
+once_cell = "1.17.1"
+obfstr = "0.4.3"

@@ -27,20 +27,23 @@ args = ["fmt", "--all", "--", "--check"]
 [tasks.fix-fmt]
 description = "Fix format"
 command = "cargo"
-args = ["fmt", "--all", "--", "--write-mode=overwrite"]
+args = ["fmt", "--all"]
 
 [tasks.clippy]
 description = "Check code quality"
+env_files = [".env.dev"]
 command = "cargo"
 args = ["clippy", "--", "-D", "warnings"]
 
 [tasks.fix-clippy]
 description = "Fix code quality"
+env_files = [".env.dev"]
 command = "cargo"
 args = ["fix", "--allow-dirty"]
 
 [tasks.test]
 description = "Check all unit test"
+env_files = [".env.dev"]
 command = "cargo"
 args = ["test"]
 dependencies = ["fmt", "clippy"]
@@ -59,18 +62,21 @@ dependencies = [
     "fmt",
     "clippy",
     "test",
-    "release-build-lambda",
+    "release-build-service",
     "release-build-web",
 ]
 
 [tasks.dev]
-dependencies = ["run-lambda", "run-web"]
+dependencies = ["run-service", "run-web"]
 
 [tasks.publish]
 dependencies = ["fmt", "clippy", "test"]
-script.pre = "cargo release --workspace --execute ${@}"
+script.pre = "mold -run cargo release --workspace --execute ${@}"
 script.main = """
-docker build -t lambda_service:$CARGO_MAKE_CRATE_VERSION -f Dockerfile.lambda . && \
-docker build -t static:$CARGO_MAKE_CRATE_VERSION -f Dockerfile .
+docker build -t portfolio_service:$CARGO_MAKE_CRATE_VERSION -f Dockerfile.service . && \
+docker build -t portfolio_static:$CARGO_MAKE_CRATE_VERSION -f Dockerfile.web .
 """
-script.post = 'echo "Now you can follow the next steps for publish into AWS ECR https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html\nAnd use $CARGO_MAKE_CRATE_VERSION as tag image"'
+script.post = """
+fly deploy -a portfolio-back -i portfolio_service:$CARGO_MAKE_CRATE_VERSION --now && \
+fly deploy -a portfolio-front -i portfolio_satatic:$CARGO_MAKE_CRATE_VERSION --now
+"""

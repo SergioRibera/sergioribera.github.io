@@ -1,7 +1,7 @@
 Welcome to my Portfolio Repository
 
 ## Features
-- Lambda Service/Backend
+- Salvo Service/Backend
 - Frontend
 - Admin Page
 
@@ -11,8 +11,8 @@ Welcome to my Portfolio Repository
 - rust == 1.68.2
 - cargo
 - docker
+- flyctl
 
 Optionals (but recomended):
 - cargo-make
-- cargo-lambda
 - trunk

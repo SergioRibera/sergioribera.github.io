@@ -1,20 +1,20 @@
-[tasks.release-build-web]
+[tasks.release-build-service]
 env_files = ["../.env"]
-command = "trunk"
+command = "cargo"
 args = ["build", "--release"]
 
-[tasks.run-web]
+[tasks.run-service]
 env_files = ["../.env.dev"]
-command = "trunk"
-args = ["serve"]
+command = "cargo"
+args = ["run"]
 
-[tasks.build-docker-web]
+[tasks.build-docker-service]
 command = "docker"
 args = [
     "build",
     "-t",
     "static:$CARGO_MAKE_CRATE_VERSION",
     "-f",
-    "../Dockerfile.web",
+    "../Dockerfile.service",
     "..",
 ]

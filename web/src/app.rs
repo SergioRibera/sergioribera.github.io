@@ -1,7 +1,8 @@
-use yew::prelude::*;
 use once_cell::sync::Lazy;
+use yew::prelude::*;
 
-pub const APPLICATION_NAME: Lazy<String> = Lazy::new(|| obfstr::obfstr!(env!("APPLICATION_NAME")).to_string());
+pub const APPLICATION_NAME: Lazy<String> =
+    Lazy::new(|| obfstr::obfstr!(env!("APPLICATION_NAME")).to_string());
 
 pub struct App;
 
