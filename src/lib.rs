@@ -1,0 +1,37 @@
+pub mod app;
+pub mod components;
+pub mod models;
+pub mod sections;
+
+use wasm_bindgen::prelude::wasm_bindgen;
+
+#[wasm_bindgen]
+extern "C" {
+    #[wasm_bindgen(js_namespace = console)]
+    fn log(msg: String);
+
+    #[wasm_bindgen(js_namespace = console)]
+    fn warn(msg: String);
+
+    #[wasm_bindgen(js_namespace = console)]
+    fn error(msg: String);
+}
+
+#[macro_export]
+macro_rules! log {
+    ($($t:tt)*) => {
+        if cfg!(debug_assertions) {
+            log(format_args!($($t)*).to_string())
+        }
+    }
+}
+
+#[macro_export]
+macro_rules! warn {
+    ($($t:tt)*) => (warn(format_args!($($t)*).to_string()))
+}
+
+#[macro_export]
+macro_rules! error {
+    ($($t:tt)*) => (error(format_args!($($t)*).to_string()))
+}

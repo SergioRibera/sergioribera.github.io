@@ -1,0 +1,70 @@
+[config]
+default_to_workspace = true
+skip_core_tasks = true
+skip_git_env_info = true
+skip_rust_env_info = true
+skip_crate_env_info = true
+
+[tasks.default]
+alias = "serve"
+
+[tasks.cargo-format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--all"]
+
+[tasks.fmt-all]
+script = '''
+leptosfmt .
+cargo fmt --all
+cargo clippy --fix -- -D warnings
+'''
+
+[tasks.check]
+script = '''
+leptosfmt --check .
+cargo fmt --all --check
+cargo clippy -- -D warnings
+'''
+
+[tasks.leptos-format]
+install_crate = "leptosfmt"
+command = "leptosfmt"
+args = ["."]
+
+[tasks.format]
+dependencies = ["cargo-format", "leptos-format"]
+
+[tasks.fmt]
+alias = "format"
+
+[tasks.get-sitemap]
+command = "sh"
+args = [
+    "-c",
+    "rm -f assets/sitemap.xml && wget -S -P assets https://github.com/Phosphorus-M/sitemap-rustico/releases/download/latest/sitemap.xml",
+]
+
+[tasks.prebuild]
+script_runner = "@shell"
+script = '''
+cp node_modules/@rustlanges/styles/dist/bundled.css bundled.css
+'''
+
+[tasks.build]
+dependencies = ["prebuild"]
+install_crate = { crate_name = "cargo-leptos", binary = "cargo", test_arg = [
+    "leptos",
+    "--version",
+], version = "0.2.42" }
+command = "cargo"
+args = ["leptos", "serve", "-r", "--split"]
+
+[tasks.serve]
+dependencies = ["prebuild"]
+install_crate = { crate_name = "cargo-leptos", binary = "cargo", test_arg = [
+    "leptos",
+    "--version",
+], version = "0.2.42" }
+command = "cargo"
+args = ["leptos", "watch", "--features", "development", "--hot-reload"]
