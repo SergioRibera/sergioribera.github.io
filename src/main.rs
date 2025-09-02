@@ -1,7 +1,7 @@
 use leptos::config::LeptosOptions;
 use leptos::{logging::log, prelude::*};
 use leptos_actix::generate_route_list_with_ssg;
-use rust_lang_es::app::*;
+use sergioribera_web::app::*;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
