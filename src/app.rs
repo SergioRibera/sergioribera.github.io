@@ -1,6 +1,8 @@
 use leptos::prelude::*;
 use leptos_meta::{provide_meta_context, Link, Meta, MetaTags, Stylesheet, Title};
 
+use crate::components::Navigator;
+
 #[cfg(debug_assertions)]
 const ASSETS_FOLDER: &str = "./assets";
 
@@ -58,6 +60,7 @@ pub fn App() -> impl IntoView {
 
     view! {
         <main>
+            <Navigator />
         </main>
     }
 }
